@@ -1,10 +1,8 @@
-package com.company.amazon;
-
-import sun.text.normalizer.Trie;
+package com.company.A;
 
 import java.util.*;
 
-public class OnSite_1903215 {
+public class S1903215 {
     /* --------------------------------------- 1 --------------------------------------- */
     // Number of island, 求面积第k大的岛，返回面积
     // BFS O(m*n*log(k))

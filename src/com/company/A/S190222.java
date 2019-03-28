@@ -1,8 +1,8 @@
-package com.company.amazon;
+package com.company.A;
 
 import java.util.*;
 
-public class Onsite_190222 {
+public class S190222 {
     static class TreeNode {
         int value;
         List<TreeNode> children;

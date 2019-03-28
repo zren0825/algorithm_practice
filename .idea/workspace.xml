@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="34d426d0-8c8a-4c03-aa6c-8c44e73f0c4c" name="Default Changelist" comment="" />
+    <list default="true" id="34d426d0-8c8a-4c03-aa6c-8c44e73f0c4c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/com/company/amazon/OnSite_1903215.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/A/S1903215.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/amazon/Onsite_190222.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/A/S190222.java" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,10 +24,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/company/amazon/OnSite_1903215.java">
+        <entry file="file://$PROJECT_DIR$/src/com/company/A/S1903215.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1065">
-              <caret line="71" column="37" selection-start-line="71" selection-start-column="37" selection-end-line="71" selection-end-column="37" />
+            <state relative-caret-position="1035">
+              <caret line="69" column="37" selection-start-line="69" selection-start-column="37" selection-end-line="69" selection-end-column="37" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -33,10 +36,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/company/amazon/Onsite_190222.java">
+        <entry file="file://$PROJECT_DIR$/src/com/company/A/S190222.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="420">
-              <caret line="28" column="27" lean-forward="true" selection-start-line="28" selection-start-column="27" selection-end-line="28" selection-end-column="27" />
+              <caret line="28" column="27" selection-start-line="28" selection-start-column="27" selection-end-line="28" selection-end-column="27" />
               <folding>
                 <element signature="e#309#310#0" expanded="true" />
                 <element signature="e#350#351#0" expanded="true" />
@@ -56,6 +59,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -63,6 +69,8 @@
         <option value="$PROJECT_DIR$/src/com/company/amazon/Amazon_OnSite_1903215.java" />
         <option value="$PROJECT_DIR$/src/com/company/amazon/OnSite_1903215.java" />
         <option value="$PROJECT_DIR$/src/com/company/amazon/Onsite_190222.java" />
+        <option value="$PROJECT_DIR$/src/com/company/amazon/S190222.java" />
+        <option value="$PROJECT_DIR$/src/com/company/A/S190222.java" />
       </list>
     </option>
   </component>
@@ -72,6 +80,7 @@
     <option name="width" value="1400" />
     <option name="height" value="907" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -100,7 +109,7 @@
               <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="company" type="462c0819:PsiDirectoryNode" />
-              <item name="amazon" type="462c0819:PsiDirectoryNode" />
+              <item name="A" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -111,7 +120,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553753135984" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553753222167" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -125,7 +134,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Onsite_190222">
+  <component name="RunManager" selected="Application.S190222">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="com.company.Main" />
       <module name="Algorithm" />
@@ -136,12 +145,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Onsite_190222" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.company.amazon.Onsite_190222" />
+    <configuration name="S190222" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.company.A.S190222" />
       <module name="Algorithm" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.company.amazon.*" />
+          <option name="PATTERN" value="com.company.A.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -151,7 +160,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Onsite_190222" />
+        <item itemvalue="Application.S190222" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -171,9 +180,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="289" y="29" width="1400" height="907" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2533137" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2533137" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -183,7 +191,7 @@
       <window_info anchor="bottom" id="Messages" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32883435" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32883435" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -217,20 +225,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/amazon/OnSite_1903215.java">
+    <entry file="file://$PROJECT_DIR$/src/com/company/A/S1903215.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1065">
-          <caret line="71" column="37" selection-start-line="71" selection-start-column="37" selection-end-line="71" selection-end-column="37" />
+        <state relative-caret-position="1035">
+          <caret line="69" column="37" selection-start-line="69" selection-start-column="37" selection-end-line="69" selection-end-column="37" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/amazon/Onsite_190222.java">
+    <entry file="file://$PROJECT_DIR$/src/com/company/A/S190222.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
-          <caret line="28" column="27" lean-forward="true" selection-start-line="28" selection-start-column="27" selection-end-line="28" selection-end-column="27" />
+          <caret line="28" column="27" selection-start-line="28" selection-start-column="27" selection-end-line="28" selection-end-column="27" />
           <folding>
             <element signature="e#309#310#0" expanded="true" />
             <element signature="e#350#351#0" expanded="true" />
