@@ -28,7 +28,7 @@ public class PickedGenes {
                 // 能走： 走一步，如果是一个series，加到result里
                 if (curPointer.children[gene - 'A'] != null) {
                     curPointer = curPointer.children[gene - 'A'];
-                    System.out.println(gene + " "  + curPointer.DNASeries);
+                    System.out.println(gene + " " + curPointer.DNASeries);
                     if (curPointer.DNASeries != null) {
                         appearingDNASeries.add(curPointer.DNASeries);
                     }
@@ -46,20 +46,21 @@ public class PickedGenes {
     }
 
     String mock_stream_value = "AGTTTCCCAA";
-    StringCharacterIterator iterator = new StringCharacterIterator( mock_stream_value);
+    StringCharacterIterator iterator = new StringCharacterIterator(mock_stream_value);
 
     private boolean hasNextGenes() {
-        return iterator.getEndIndex()!=iterator.getIndex();
+        return iterator.getEndIndex() != iterator.getIndex();
     }
+
     private char getGenes() {
-        char c  = iterator.current();
+        char c = iterator.current();
         iterator.next();
         return c;
     }
 
     public static void main(String[] args) {
         PickedGenes test = new PickedGenes();
-        System.out.println(test.getAppearingDNASeries(new String[]{"AG","CAA","ACA"}));
+        System.out.println(test.getAppearingDNASeries(new String[]{"AG", "CAA", "ACA"}));
     }
 }
 
@@ -70,14 +71,16 @@ class TrieNode {
     TrieNode(String DNASeries) {
         this.DNASeries = DNASeries;
     }
-    TrieNode(){
+
+    TrieNode() {
     }
 }
 
 class Trie {
     public TrieNode root;// could be set to final referring to this root specifically.
-    Trie(){
-        this.root  = new TrieNode();
+
+    Trie() {
+        this.root = new TrieNode();
     }
 
     public void insertDNASeries(String DNASeries) {

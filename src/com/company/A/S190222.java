@@ -171,7 +171,7 @@ public class S190222 {
         while (n-- > 0 && fast != null) {
             fast = fast.next;
         }
-        if(fast == null) {
+        if (fast == null) {
             throw new IllegalArgumentException("n is too large.");
         }
         while (fast.next != null) {
