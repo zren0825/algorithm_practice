@@ -77,7 +77,7 @@ public class S1903215 {
       if (next == null) {
         cur.children[c - 'A'] = new TrieNode(null);
       }
-      cur = next;
+      cur = cur.children[c - 'A'];
     }
     cur.DNASeries = DNASeries;
   }
@@ -102,6 +102,7 @@ public class S1903215 {
           if (curPointer.DNASeries != null) {
             appearingDNASeries.add(curPointer.DNASeries);
           }
+          pointers.set(i, curPointer);
           // 不能走： 直接从list里面remove
         } else {
           pointers.remove(i--); // i - 1 因为删掉了一个
