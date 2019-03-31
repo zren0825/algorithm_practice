@@ -93,11 +93,28 @@ public class S190222 {
 
   // Streaming
   public int maxValue() {
+    TreeMap<Integer, Interval> treeMap = new TreeMap<>();
+    int maxValue = 0;
     while (hasNext()) {
-      Interval next = getNext();
-
-      // To be implemented
-        
+      Interval newInterval = getNext();
+      int startTime = newInterval.startTime;
+      int endTime = newInterval.endTime;
+      int value = newInterval.value;
+      Interval prevInterval = treeMap.get(treeMap.floorKey(startTime));
+      if (prevInterval != null && prevInterval.endTime > startTime) {
+        if (endTime <= prevInterval.endTime) {
+          // 思考：能不能不拆？
+          // 拆成三段不overlap的
+        } else {
+          // 拆成三段不overlap的
+        }
+        maxValue = prevInterval.value + value > maxValue ? prevInterval.value + value : maxValue;
+      }
+      Interval nextInterval = treeMap.get(treeMap.ceilingKey(startTime));
+      while (nextInterval != null && nextInterval.startTime < endTime) {
+        // 拆成三段不overlap的
+      }
+      // update max
     }
     return 0;
   }

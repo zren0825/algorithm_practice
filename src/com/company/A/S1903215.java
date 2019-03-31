@@ -58,7 +58,7 @@ public class S1903215 {
   /* --------------------------------------- 2 --------------------------------------- */
   // String getGenes(); 获得下一个DNA序列内容
   // String[] 里面的每个短DNA序列是不是在长DNA序列里面
-  class TrieNode {
+  static class TrieNode {
     private TrieNode[] children;
     private String DNASeries;
 
@@ -77,7 +77,7 @@ public class S1903215 {
       if (next == null) {
         cur.children[c - 'A'] = new TrieNode(null);
       }
-      cur = next;
+      cur = cur.children[c - 'A'];
     }
     cur.DNASeries = DNASeries;
   }
@@ -101,7 +101,9 @@ public class S1903215 {
           curPointer = curPointer.children[gene - 'A'];
           if (curPointer.DNASeries != null) {
             appearingDNASeries.add(curPointer.DNASeries);
+
           }
+          pointers.set(i, curPointer);
           // 不能走： 直接从list里面remove
         } else {
           pointers.remove(i--); // i - 1 因为删掉了一个
@@ -120,5 +122,13 @@ public class S1903215 {
     return 'A';
   }
 
-  public static void main(String[] args) {}
+  public static void main(String[] args) {
+    List<TrieNode> pointers = new ArrayList<>();
+    pointers.add(new TrieNode("a"));
+    pointers.add(new TrieNode("b"));
+    pointers.add(new TrieNode("c"));
+    TrieNode curPointer = pointers.get(1); // b
+    curPointer = pointers.get(2);
+    System.out.println(pointers.get(1).DNASeries);
+  }
 }
