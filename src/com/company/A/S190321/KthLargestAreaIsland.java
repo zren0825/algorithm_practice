@@ -1,8 +1,8 @@
-package com.company.A;
+package com.company.A.S190321;
 
 import java.util.*;
 
-public class S1903215 {
+public class KthLargestAreaIsland {
     /* --------------------------------------- 1 --------------------------------------- */
     // Number of island, 求面积第k大的岛，返回面积
     // BFS O(m*n*log(k))
@@ -53,65 +53,6 @@ public class S1903215 {
             }
         }
         return area;
-    }
-
-    /* --------------------------------------- 2 --------------------------------------- */
-    // String getGenes(); 获得下一个DNA序列内容
-    // String[] 里面的每个短DNA序列是不是在长DNA序列里面
-    static class TrieNode {
-        private TrieNode[] children;
-        private String DNASeries;
-
-        TrieNode(String DNASeries) {
-            children = new TrieNode[26]; // A G T C
-            this.DNASeries = DNASeries;
-        }
-    }
-
-    private TrieNode root;
-
-    private void insertDNASeries(String DNASeries) {
-        TrieNode cur = root;
-        for (char c : DNASeries.toCharArray()) {
-            TrieNode next = cur.children[c - 'A'];
-            if (next == null) {
-                cur.children[c - 'A'] = new TrieNode(null);
-            }
-            cur = cur.children[c - 'A'];
-        }
-        cur.DNASeries = DNASeries;
-    }
-
-    public List<String> getAppearingDNASeries(String[] DNASeriesArray) {
-        for (String DNASeries : DNASeriesArray) {
-            insertDNASeries(DNASeries);
-        }
-        List<String> appearingDNASeries = new LinkedList<>();
-        List<TrieNode> pointers = new ArrayList<>();
-        while (hasNextGenes()) {
-            char gene = getGenes();
-            // 每次有新的streaming data 先加个pointer进去
-            TrieNode newPointer = root;
-            pointers.add(newPointer);
-            // 对于list里面每个pointer, 看看能不能往下走一步
-            for (int i = 0; i < pointers.size(); i++) {
-                TrieNode curPointer = pointers.get(i);
-                // 能走： 走一步，如果是一个series，加到result里
-                if (curPointer.children[gene - 'A'] != null) {
-                    curPointer = curPointer.children[gene - 'A'];
-                    if (curPointer.DNASeries != null) {
-                        appearingDNASeries.add(curPointer.DNASeries);
-
-                    }
-                    pointers.set(i, curPointer);
-                    // 不能走： 直接从list里面remove
-                } else {
-                    pointers.remove(i--); // i - 1 因为删掉了一个
-                }
-            }
-        }
-
-        return appearingDNASeries;
     }
 
     private boolean hasNextGenes() {
