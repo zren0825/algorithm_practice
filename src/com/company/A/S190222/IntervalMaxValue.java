@@ -61,6 +61,7 @@ public class IntervalMaxValue {
             boolean inserted = false;
             Interval prevInterval = treeMap.get(treeMap.floorKey(startTime));
             if (prevInterval != null && prevInterval.endTime > startTime) {
+                treeMap.remove(prevInterval.startTime);
                 // 两种情况都要加最左边的
                 if (startTime != prevInterval.startTime) {
                     treeMap.put(prevInterval.startTime, new Interval(prevInterval.startTime, startTime, prevInterval.value));
@@ -76,11 +77,12 @@ public class IntervalMaxValue {
                     treeMap.put(prevInterval.endTime, new Interval(prevInterval.endTime, endTime, value));
                 }
                 maxValue = prevInterval.value + value > maxValue ? prevInterval.value + value : maxValue;
-                treeMap.remove(prevInterval.startTime);
+
                 inserted = true;
             }
             Interval nextInterval = treeMap.get(treeMap.ceilingKey(startTime));
             while (nextInterval != null && nextInterval.startTime < endTime) {
+                treeMap.remove(nextInterval.startTime);
                 // 两种情况都要加最左边的
                 if (startTime != nextInterval.startTime) {
                     treeMap.put(startTime, new Interval(startTime, nextInterval.startTime, value));
@@ -96,8 +98,8 @@ public class IntervalMaxValue {
                     treeMap.put(endTime, new Interval(endTime, nextInterval.endTime, nextInterval.value));
                 }
                 maxValue = prevInterval.value + value > maxValue ? prevInterval.value + value : maxValue;
-                treeMap.remove(nextInterval.startTime);
                 inserted = true;
+                nextInterval = treeMap.get(treeMap.ceilingKey(nextInterval.startTime));
             }
             if(!inserted) {
                 treeMap.put(startTime, newInterval);
