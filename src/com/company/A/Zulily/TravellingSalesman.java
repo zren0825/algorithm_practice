@@ -5,7 +5,8 @@ import java.util.*;
 class City {
     String name;
     Map<City, Integer> neis;
-    public City(String name, Map<City, Integer> neis){
+
+    public City(String name, Map<City, Integer> neis) {
         this.name = name;
         this.neis = neis;
     }
@@ -20,23 +21,23 @@ public class TravellingSalesman {
     }
 
     private void shortestWayToVisitAllCity(List<City> shortestWay, List<City> curOrder, Set<String> visited, int[] minDist, int dist, City cur, int numCities) {
-        if(curOrder.size() == numCities && dist < minDist[0]) {
+        if (curOrder.size() == numCities && dist < minDist[0]) {
             shortestWay = new LinkedList<>(curOrder);
             minDist[0] = dist;
             return;
         }
-        if(curOrder.size() == numCities) {
+        if (curOrder.size() == numCities) {
             return;
         }
-        for(Map.Entry<City, Integer> entry: cur.neis.entrySet()) {
+        for (Map.Entry<City, Integer> entry : cur.neis.entrySet()) {
             City nextCity = entry.getKey();
-            if(visited.contains(nextCity.name)) {
+            if (visited.contains(nextCity.name)) {
                 continue;
             }
-            Integer distToNextCity= entry.getValue();
+            Integer distToNextCity = entry.getValue();
             curOrder.add(nextCity);
             visited.add(nextCity.name);
-            shortestWayToVisitAllCity(shortestWay, curOrder, visited, minDist,dist + distToNextCity, nextCity, numCities);
+            shortestWayToVisitAllCity(shortestWay, curOrder, visited, minDist, dist + distToNextCity, nextCity, numCities);
             curOrder.remove(curOrder.size() - 1);
             visited.remove(nextCity.name);
         }

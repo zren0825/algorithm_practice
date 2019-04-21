@@ -17,10 +17,12 @@ class TreeNode {
 public class BinaryTreeIterator implements Iterator<TreeNode> {
 
     Stack<TreeNode> stack;
+
     BinaryTreeIterator(TreeNode root) {
         stack = new Stack<>();
         pushLefts(root);
     }
+
     @Override
     public boolean hasNext() {
         return !stack.isEmpty();
@@ -28,7 +30,7 @@ public class BinaryTreeIterator implements Iterator<TreeNode> {
 
     @Override
     public TreeNode next() {
-        if(!hasNext()) {
+        if (!hasNext()) {
             throw new NoSuchElementException();
         }
         TreeNode top = stack.pop();
@@ -39,7 +41,7 @@ public class BinaryTreeIterator implements Iterator<TreeNode> {
 
     private void pushLefts(TreeNode node) {
         TreeNode cur = node;
-        while(cur != null) {
+        while (cur != null) {
             stack.push(cur);
             cur = cur.left;
         }
@@ -57,7 +59,7 @@ public class BinaryTreeIterator implements Iterator<TreeNode> {
         n2.left = n3;
         Iterator<TreeNode> bti = new BinaryTreeIterator(n0);
         // 3 2 1 4 0
-        while(bti.hasNext()) {
+        while (bti.hasNext()) {
             System.out.println(bti.next().val);
         }
     }
