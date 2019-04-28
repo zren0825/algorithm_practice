@@ -55,12 +55,14 @@ public class BestTimeToBuyAndSellStock {
         for(int i = 1; i <= len; i++){
             for(int j = 1; j <= 5; j++){
                 // status 1,3,5
+                // 昨天没有持有股票 or 昨天持有股票今天卖掉
                 if(j % 2 == 1){
                     dp[i][j] = dp[i-1][j];
                     if(i > 1 && j > 1 && dp[i-1][j-1] != Integer.MIN_VALUE)
                         dp[i][j] = Math.max(dp[i][j], dp[i-1][j-1] + prices[i-1] - prices[i-2]);
                 }
                 // status 2,4
+                // 昨天持有股票并且继续持有 or 昨天没有持有股票今天买入 or 昨天持有上一次的股票今天卖出并立即买入
                 else{
                     dp[i][j] = dp[i-1][j-1];
                     if(i > 1 && j > 1 && dp[i-1][j] != Integer.MIN_VALUE)
