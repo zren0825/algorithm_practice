@@ -19,7 +19,6 @@ public class MinimumSubarrayContainAllElements {
                 if (dist > end - start) {
                     dist = end - (begin = start);
                 }
-
                 // invalidate window
                 if (count[s.charAt(start)] == 0) {
                     total++;
